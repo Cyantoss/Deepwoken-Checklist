@@ -1,5 +1,5 @@
 // Getting elements
-import { Analytics } from "@vercel/analytics/react"
+import { inject } from "@vercel/analytics"
 const actionCheckboxes = document.querySelectorAll('.action-checkbox');
 const modifierCheckboxes = document.querySelectorAll('.modifier-checkbox');
 const totalEchoesDisplay = document.getElementById('total-echoes');
