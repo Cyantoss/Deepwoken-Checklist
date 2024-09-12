@@ -15,7 +15,6 @@
             <a href="https://discord.gg/rg6swBSN">
                 <img src="icons8-discord-48.png" alt="Description" class="header-image">
                 <img src="GBNTakV (1).png" alt="Your Logo" class="logo">
-
             </a>
         </div>
     </header>
@@ -25,19 +24,19 @@
         <div class="side-panel">
             <h2>Modifiers</h2>
             <div class="modifiers-section">
-                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.5"> Fragile Heart (+0.5x Echo)</label>
-                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.1"> Crestfallen (+0.1x Echo)</label>
-                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.2"> Deep Champion (+0.2x Echo)</label>
-                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.3"> Dissonant (+0.3x Echo)</label>
-                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.1"> Hollow (+0.1x Echo)</label>
-                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.1"> Slowburn (+0.1x Echo)</label>
-                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.05"> Dealbreaker (+0.05x Echo)</label>
-                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.2"> Loose Change (+0.2x Echo)</label>
-                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.1"> High Velocity (+0.1x Echo)</label>
-                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.1"> Ironwoken (+0.1x Echo)</label>
-                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.2"> One Bit (+0.2x Echo)</label>
-                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.2"> Destined (+0.2x Echo)</label>
-                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.05"> Vow of Thorns (+0.05x Echo)</label>
+                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.5" data-description="Incoming damage from mobs is doubled."> Fragile Heart (+0.5x Echo)</label>
+                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.1" data-description="Armor is permanently broken."> Crestfallen (+0.1x Echo)</label>
+                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.2" data-description="Your Depths trial is always corrupted."> Deep Champion (+0.2x Echo)</label>
+                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.3" data-description="You cannot use a Resonance."> Dissonant (+0.3x Echo)</label>
+                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.1" data-description="All overworld deaths send you to the Depths."> Hollow (+0.1x Echo)</label>
+                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.1" data-description="All incoming healing is heavily reduced."> Slowburn (+0.1x Echo)</label>
+                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.05" data-description="You sell items for 25% less."> Dealbreaker (+0.05x Echo)</label>
+                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.2" data-description="All damage received makes you lose notes on hit."> Loose Change (+0.2x Echo)</label>
+                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.1" data-description="All fall damage is heavily amplified."> High Velocity (+0.1x Echo)</label>
+                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.1" data-description="You cannot receive notes or items from other players."> Ironwoken (+0.1x Echo)</label>
+                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.2" data-description="You don't know how to swim."> One Bit (+0.2x Echo)</label>
+                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.2" data-description="You don't get to choose what you get when your Power increase, Fate picks for you."> Destined (+0.2x Echo)</label>
+                <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.05" data-description="Enhance your progression and chances for rarer mob loot. However, you are faced with harder trials and every death will send you to the depths."> Vow of Thorns (+0.05x Echo)</label>
             </div>
         </div>
 
@@ -54,144 +53,144 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Gain Power</td>
+                            <td data-description="Gain more power to increase Echoes.">Gain Power</td>
                             <td>
-                                <input type="number" id="power-input" value="0" min="0" step="1">
+                                <input type="number" id="power-input" value="0" min="0" step="1" data-description="Enter power value to increase Echoes.">
                             </td>
                             <td>+0.75 Echo per Power</td>
                         </tr>
                         <tr>
-                            <td>Cooked Food</td>
+                            <td data-description="Cooking food gives 1 Echo.">Cooked Food</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="1"></td>
                             <td>+1 Echo</td>
                         </tr>
                         <tr>
-                            <td>Catching a Fish</td>
+                            <td data-description="Catching a fish gives 1 Echo.">Catching a Fish</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="1"></td>
                             <td>+1 Echo</td>
                         </tr>
                         <tr>
-                            <td>Modifying a Mantra</td>
+                            <td data-description="Modifying a mantra gives 1 Echo.">Modifying a Mantra</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="1"></td>
                             <td>+1 Echo</td>
                         </tr>
                         <tr>
-                            <td>Turn Pure Ore</td>
+                            <td data-description="Turning pure ore gives 1 Echo.">Turn Pure Ore</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="1"></td>
                             <td>+1 Echo</td>
                         </tr>
                         <tr>
-                            <td>Win a Chime Match</td>
+                            <td data-description="Winning a Chime match gives 1 Echo.">Win a Chime Match</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="1"></td>
                             <td>+1 Echo</td>
                         </tr>
                         <tr>
-                            <td>Drink Attribute Flask</td>
+                            <td data-description="Drinking an attribute flask gives 2 Echoes.">Drink Attribute Flask</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="2"></td>
                             <td>+2 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Craft Master Armor</td>
+                            <td data-description="Crafting master armor gives 2 Echoes.">Craft Master Armor</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="2"></td>
                             <td>+2 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Use a Deep Shrine</td>
+                            <td data-description="Using a deep shrine gives 2 Echoes.">Use a Deep Shrine</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="2"></td>
                             <td>+2 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Deal with Misérables</td>
+                            <td data-description="Dealing with Misérables gives 2 Echoes.">Deal with Misérables</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="2"></td>
                             <td>+2 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Use a Yun'shul Wish</td>
+                            <td data-description="Using a Yun'shul Wish gives 2 Echoes.">Use a Yun'shul Wish</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="2"></td>
                             <td>+2 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Attribute Unbound</td>
+                            <td data-description="Unbinding an attribute gives 5 Echoes.">Attribute Unbound</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="5"></td>
                             <td>+5 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Obtain Oath</td>
+                            <td data-description="Obtaining an Oath gives 5 Echoes.">Obtain Oath</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="5"></td>
                             <td>+5 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Soul-bounding</td>
+                            <td data-description="Soul-bounding gives 5 Echoes.">Soul-bounding</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="5"></td>
                             <td>+5 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Use Enchantment Stone</td>
+                            <td data-description="Using an enchantment stone gives 5 Echoes.">Use Enchantment Stone</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="5"></td>
                             <td>+5 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Enchantment via Laplace</td>
+                            <td data-description="Enchantment via Laplace gives 5 Echoes.">Enchantment via Laplace</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="5"></td>
                             <td>+5 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Use Pluripotent Alloy</td>
+                            <td data-description="Using Pluripotent Alloy gives 5 Echoes.">Use Pluripotent Alloy</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="5"></td>
                             <td>+5 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Murmur</td>
+                            <td data-description="Obtaining a Murmur gives 5 Echoes.">Murmur</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="5"></td>
                             <td>+5 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Defeat Dread Serpent (Kaido)</td>
+                            <td data-description="Defeating the Dread Serpent (Kaido) gives 5 Echoes.">Defeat Dread Serpent (Kaido)</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="5"></td>
                             <td>+5 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Defeat Duke Erisia</td>
+                            <td data-description="Defeating Duke Erisia gives 5 Echoes.">Defeat Duke Erisia</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="5"></td>
                             <td>+5 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Defeat Chaser</td>
+                            <td data-description="Defeating Chaser gives 5 Echoes.">Defeat Chaser</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="5"></td>
                             <td>+5 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Defeat Primadon</td>
+                            <td data-description="Defeating Primadon gives 5 Echoes.">Defeat Primadon</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="5"></td>
                             <td>+5 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Defeat Ferryman</td>
+                            <td data-description="Defeating the Ferryman gives 5 Echoes.">Defeat Ferryman</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="5"></td>
                             <td>+5 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Obtain Deepshore Fossil</td>
+                            <td data-description="Obtaining a Deepshore Fossil gives 5 Echoes.">Obtain Deepshore Fossil</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="5"></td>
                             <td>+5 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Defeat Scion of Ethiron</td>
+                            <td data-description="Defeating Scion of Ethiron gives 10 Echoes.">Defeat Scion of Ethiron</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="10"></td>
                             <td>+10 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Complete Hell Mode</td>
+                            <td data-description="Completing Hell Mode gives 10 Echoes.">Complete Hell Mode</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="10"></td>
                             <td>+10 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Hookless Layer 2 Floor 1</td>
+                            <td data-description="Completing Hookless Layer 2 Floor 1 gives 10 Echoes.">Hookless Layer 2 Floor 1</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="10"></td>
                             <td>+10 Echoes</td>
                         </tr>
                         <tr>
-                            <td>Obtain Resonance</td>
+                            <td data-description="Obtaining Resonance gives 15 Echoes.">Obtain Resonance</td>
                             <td><input type="checkbox" class="action-checkbox" data-echo="15"></td>
                             <td>+15 Echoes</td>
                         </tr>

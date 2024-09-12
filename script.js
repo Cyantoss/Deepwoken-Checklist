@@ -10,6 +10,38 @@ const powerInput = document.getElementById('power-input');
 let totalEchoes = 0;
 let powerEchoes = 0;
 
+// Tooltip functionality
+let tooltip = document.createElement('div');
+tooltip.classList.add('tooltip');
+document.body.appendChild(tooltip);
+
+function showTooltip(event) {
+    const description = event.target.dataset.description;
+    if (description) {
+        tooltip.textContent = description;
+        tooltip.style.display = 'block';
+        updateTooltipPosition(event);
+    }
+}
+
+function hideTooltip() {
+    tooltip.style.display = 'none';
+}
+
+function updateTooltipPosition(event) {
+    tooltip.style.left = `${event.pageX + 10}px`;
+    tooltip.style.top = `${event.pageY + 10}px`;
+}
+
+// Add hover event listeners to modifier checkboxes with descriptions
+modifierCheckboxes.forEach(checkbox => {
+    if (checkbox.dataset.description) {
+        checkbox.addEventListener('mouseenter', showTooltip);
+        checkbox.addEventListener('mousemove', updateTooltipPosition);
+        checkbox.addEventListener('mouseleave', hideTooltip);
+    }
+});
+
 // Update the total Echoes based on actions completed
 function updateTotalEchoes() {
     totalEchoes = 0;

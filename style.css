@@ -59,8 +59,18 @@ body {
     image-rendering: auto;
 }
 
-
-
+/* Tooltip Styles for Modifiers */
+.tooltip {
+    position: absolute;
+    display: none;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1001;
+    pointer-events: none; /* Ensure the tooltip doesn't block other elements */
+}
 
 /* Main Content Styling */
 .container {
@@ -145,10 +155,7 @@ tr:nth-child(even) {
     margin-top: 72px; /* Adjust this value to move it down */
     border-image: url("https://deepwoken.co/border.png") 30 round; /* Adjust the size (30) as needed */
     border: 2px solid #E4E4CC; /* Fallback for browsers that don't support border-image */
-
-
 }
-
 
 .side-panel h2 {
     color: #fff;
@@ -166,6 +173,7 @@ tr:nth-child(even) {
     color: #fff;
     display: flex;
     align-items: center;
+    position: relative; /* For tooltip positioning */
 }
 
 .modifiers-section input[type="checkbox"] {
@@ -218,41 +226,7 @@ footer {
     color: #fff;
 }
 
-/* Theme Button Styles */
-.active-theme.svelte-1yi82bb,
-.theme-button.svelte-1yi82bb:hover { 
-    border: 2px solid white; 
-}
-
-.theme-button.svelte-1yi82bb { 
-    border: 1px solid white; 
-    border-radius: 50%; 
-    width: 18px; 
-    height: 18px; 
-    margin: 5px;
-} 
-
-.toggle-desktop { 
-    margin: 5px; 
-    color: #202020; 
-    border: 1px solid transparent; 
-    border-image: url(https://deepwoken.co/border.png) 45%; 
-    border-image-width: 15px; 
-    border-image-outset: 2px; 
-    padding: 5px; 
-    font-size: 14px; 
-    background-color: hsl(56, 16%, 82%);
-} 
-
-/* Additional Theme Styles */
-.depths, .gale, .chimes { 
-    background: radial-gradient(#264a50, #040d13);
-}
-
-.depths-button, .gale-button, .chimes-button { 
-    background: #012833; 
-}
-
+/* Power Input Styling */
 #power-input {
     width: 80px; /* Adjust width as needed */
     padding: 10px;
@@ -282,4 +256,3 @@ footer {
     -webkit-appearance: none; /* Hide default number input arrows */
     margin: 0;
 }
-
