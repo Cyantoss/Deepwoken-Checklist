@@ -61,11 +61,11 @@ function updateTotalEchoes() {
     const finalEchoes = totalEchoes * totalMultiplier;
 
     // Update displays
-    totalEchoesDisplay.textContent = finalEchoes.toFixed(2); // Show final calculated echoes
+    totalEchoesDisplay.textContent = totalEchoes.toFixed(2); // Show total echoes without multiplier
     totalMultiplierDisplay.textContent = `x${totalMultiplier.toFixed(1)} (Final: ${finalEchoes.toFixed(2)})`;
 
-    // Update rank display
-    updateRank(finalEchoes); // Use finalEchoes to determine rank
+    // Update rank display (using totalEchoes and finalEchoes)
+    updateRank(totalEchoes, finalEchoes);
 }
 
 // Calculate the total multiplier based on selected modifiers
@@ -95,21 +95,21 @@ function updatePowerEchoes() {
     updateTotalEchoes(); // Recalculate the echoes whenever power input changes
 }
 
-// Update the rank based on final Echoes after applying the multiplier
-function updateRank(finalEchoes) {
+// Update the rank based on total Echoes (without multiplier) and final Echoes (with multiplier)
+function updateRank(totalEchoes, finalEchoes) {
     let rank = 'E';
 
-    if (finalEchoes >= 441) {
-        rank = 'W';
-    } else if (finalEchoes >= 140) {
+    if (finalEchoes >= 441 && totalEchoes >= 140) {
+        rank = 'W'; // W rank requires both final echoes >= 441 and total echoes >= 140
+    } else if (totalEchoes >= 140) {
         rank = 'S';
-    } else if (finalEchoes >= 112) {
+    } else if (totalEchoes >= 112) {
         rank = 'A';
-    } else if (finalEchoes >= 87) {
+    } else if (totalEchoes >= 87) {
         rank = 'B';
-    } else if (finalEchoes >= 60) {
+    } else if (totalEchoes >= 60) {
         rank = 'C';
-    } else if (finalEchoes >= 30) {
+    } else if (totalEchoes >= 30) {
         rank = 'D';
     }
 
