@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,12 +12,16 @@
         <div class="navbar">
             <h1>Deepwoken Echoes Checklist</h1>
             <a href="https://discord.gg/rg6swBSN">
-                <img src="icons8-discord-48.png" alt="Description" class="header-image">
+                <img src="icons8-discord-48.png" alt="Discord" class="header-image">
                 <img src="GBNTakV (1).png" alt="Your Logo" class="logo">
             </a>
         </div>
     </header>
     
+    <!-- Character Information Section -->
+    <section id="character-info">
+        <h2 id="character-details"></h2>
+    </section>
 
     <div class="container">
         <div class="side-panel">
@@ -37,6 +40,7 @@
                 <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.2" data-description="You don't know how to swim."> One Bit (+0.2x Echo)</label>
                 <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.2" data-description="You don't get to choose what you get when your Power increase, Fate picks for you."> Destined (+0.2x Echo)</label>
                 <label><input type="checkbox" class="modifier-checkbox" data-modifier="0.05" data-description="Enhance your progression and chances for rarer mob loot. However, you are faced with harder trials and every death will send you to the depths."> Vow of Thorns (+0.05x Echo)</label>
+                <!-- Add more modifier checkboxes here -->
             </div>
         </div>
 
@@ -202,6 +206,17 @@
                 <h3>Total Echoes: <span id="total-echoes">0</span></h3>
                 <h3>Total Echo Multiplier: <span id="total-multiplier">x1.0</span></h3>
                 <h3>Rank: <span id="rank">E</span></h3>
+
+                <!-- Reset and Upload Buttons -->
+                <button id="reset-button">Reset Character</button>
+                <button id="upload-progress-button">Upload Progress</button>
+
+                <!-- Image display section for progress upload -->
+                <div id="progress-section">
+                    <input type="file" id="upload-input" style="display:none;">
+                    <img id="uploaded-image" src="" alt="Progress Image" style="display:none; max-width: 100%; height: auto;">
+                    <p id="progress-details"></p>
+                </div>
             </section>
         </div>
     </div>
@@ -211,6 +226,20 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Check if characterName and characterRace are stored in localStorage
+        const characterName = localStorage.getItem('characterName');
+        const characterRace = localStorage.getItem('characterRace');
+
+        // If either is missing, redirect to the registration page
+        if (!characterName || !characterRace) {
+            window.location.href = 'register.html';
+        } else {
+            // Display character details if available
+            document.getElementById('character-details').textContent = 
+                `Character: ${characterName}, Race: ${characterRace}`;
+        }
+    </script>
 
 </body>
 </html>

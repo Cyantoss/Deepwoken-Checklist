@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Register Your Character</h2>
+        <form id="registration-form">
+            <!-- Name as Textbox -->
+            <label for="name">Character Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter character name" required><br><br>
+
+            <!-- Race as Dropdown -->
+            <label for="race">Race:</label>
+            <select id="race" name="race" required>
+                <option value="" disabled selected>Select a race</option>
+                <option value="Capra">Capra</option>
+                <option value="Vesperian">Vesperian</option>
+                <option value="Ganymede">Ganymede</option>
+                <option value="Gremor">Gremor</option>
+                <option value="Tiran">Tiran</option>
+                <option value="Canor">Canor</option>
+                <option value="Chrysid">Chrysid</option>
+                <option value="Adret">Adret</option>
+                <option value="Felinor">Felinor</option>
+                <option value="Celtor">Celtor</option>
+                <option value="Khan">Khan</option>
+                <option value="Etrean">Etrean</option>
+                <option value="Lightborn">Lightborn</option>
+                <option value="Heliodar">Heliodar</option>
+                <option value="Drakkard">Drakkard</option>
+                <option value="Auroran (Subrace)">Auroran (Subrace)</option>
+                <option value="Aberrant Capra (Subrace)">Aberrant Capra (Subrace)</option>
+                <option value="Primal Vesperian (Subrace)">Primal Vesperian (Subrace)</option>
+            </select><br><br>
+
+            <button type="submit">Enter</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Capture form data
+            const name = document.getElementById('name').value;
+            const race = document.getElementById('race').value;
+            
+            // Save data to localStorage
+            localStorage.setItem('characterName', name);
+            localStorage.setItem('characterRace', race);
+            
+            // Redirect to index.html
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
