@@ -1,3 +1,6 @@
+import { inject } from '@vercel/analytics';
+inject();
+
 // Getting elements
 const actionCheckboxes = document.querySelectorAll('.action-checkbox');
 const modifierCheckboxes = document.querySelectorAll('.modifier-checkbox');
@@ -5,6 +8,8 @@ const totalEchoesDisplay = document.getElementById('total-echoes');
 const totalMultiplierDisplay = document.getElementById('total-multiplier');
 const rankDisplay = document.getElementById('rank');
 const powerInput = document.getElementById('power-input');
+
+ 
 
 // Variables to store Echo values
 let totalEchoes = 0;
@@ -171,3 +176,4 @@ uploadInput.addEventListener('change', function(event) {
         `;
     }
 });
+
