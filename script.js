@@ -1,5 +1,5 @@
-import { inject } from '@vercel/analytics';
-inject();
+// import { inject } from '@vercel/analytics';
+// inject();
 
 // Getting elements
 const actionCheckboxes = document.querySelectorAll('.action-checkbox');
