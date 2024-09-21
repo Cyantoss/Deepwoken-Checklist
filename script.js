@@ -1,6 +1,3 @@
-// import { inject } from '@vercel/analytics';
-// inject();
-
 // Getting elements
 const actionCheckboxes = document.querySelectorAll('.action-checkbox');
 const modifierCheckboxes = document.querySelectorAll('.modifier-checkbox');
@@ -8,8 +5,7 @@ const totalEchoesDisplay = document.getElementById('total-echoes');
 const totalMultiplierDisplay = document.getElementById('total-multiplier');
 const rankDisplay = document.getElementById('rank');
 const powerInput = document.getElementById('power-input');
-
- 
+const enableAllModifiersButton = document.getElementById('enable-all-modifiers-button');
 
 // Variables to store Echo values
 let totalEchoes = 0;
@@ -177,3 +173,23 @@ uploadInput.addEventListener('change', function(event) {
     }
 });
 
+// "Enable All Modifiers" functionality
+enableAllModifiersButton.addEventListener('click', function() {
+    const allChecked = Array.from(modifierCheckboxes).every(checkbox => checkbox.checked);
+
+    if (allChecked) {
+        // If all are checked, uncheck all and change the button text to "Enable All Modifiers"
+        modifierCheckboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+        enableAllModifiersButton.textContent = 'Enable All Modifiers';
+    } else {
+        // If not all are checked, check all and change the button text to "Disable All Modifiers"
+        modifierCheckboxes.forEach(checkbox => {
+            checkbox.checked = true;
+        });
+        enableAllModifiersButton.textContent = 'Disable All Modifiers';
+    }
+    
+    updateTotalEchoes(); // Recalculate the echoes after enabling/disabling all modifiers
+});
